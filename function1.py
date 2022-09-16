@@ -1,9 +1,9 @@
-
+#Функции
 def SayHello() :
     print("Привет, Мир!")
 
 SayHello()
-
+#Параметры функций
 def printMax(a,b):
     if a > b:
         print(a, 'максимально')
@@ -14,8 +14,13 @@ def printMax(a,b):
 
 printMax(5,8)
 
-x = 50
+g = 5
+j = 9
 
+printMax(g,j)
+
+#локальные переменные
+x = 50
 def func(x):
     print('x равен', x)
     x = 2
@@ -24,8 +29,9 @@ def func(x):
 func(x)
 print('x по прежнему', x)
 
-y = 20
 
+#Зарезервированное слово Global
+y = 20
 def functt():
     global y
     print('y равно', y)
@@ -35,6 +41,8 @@ def functt():
 functt()
 print('значение y составляет', y)
 
+
+#Зарезервированное слово nonlocal
 def func_outer():
     x = 2
     print('x равно', x)
@@ -48,12 +56,15 @@ def func_outer():
 
 func_outer()
 
+#Значение аргументов по умолчанию
 def say(message, times = 1):
     print(message * times)
 
 say("Аким")
 say("шмонька! ", 5)
 
+
+#Ключевые аргументы
 def func_key(a, b=5, c=10):
     print("a равно", a, "b равно", b, "c равно", c)
 
